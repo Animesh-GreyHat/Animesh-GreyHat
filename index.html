@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM-SIMULATOR</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the ATM</h1>
+        
+        <!-- PIN Login Form -->
+        <div id="login-section">
+            <h2>Enter Your PIN</h2>
+            <input type="password" id="pinInput" placeholder="Enter PIN">
+            <button onclick="validatePIN()">Login</button>
+            <p id="error-message" style="color: red; display: none;">Incorrect PIN. Please try again.</p>
+        </div>
+
+        <!-- ATM Menu -->
+        <div id="atm-menu" style="display:none;">
+            <h2>ATM Menu</h2>
+            <p>Balance: $<span id="balance">1000</span></p>
+            <button onclick="checkBalance()">Check Balance</button>
+            <button onclick="showDeposit()">Deposit Money</button>
+            <button onclick="showWithdraw()">Withdraw Money</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <!-- Deposit Form -->
+        <div id="deposit-form" style="display:none;">
+            <h3>Deposit Money</h3>
+            <input type="number" id="deposit-amount" placeholder="Amount to deposit">
+            <button onclick="depositMoney()">Deposit</button>
+            <button onclick="cancelDeposit()">Cancel</button>
+        </div>
+
+        <!-- Withdraw Form -->
+        <div id="withdraw-form" style="display:none;">
+            <h3>Withdraw Money</h3>
+            <input type="number" id="withdraw-amount" placeholder="Amount to withdraw">
+            <button onclick="withdrawMoney()">Withdraw</button>
+            <button onclick="cancelWithdraw()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
