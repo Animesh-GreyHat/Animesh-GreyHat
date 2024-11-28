@@ -3,7 +3,7 @@ let currentUser = ""; // Store the logged-in user
 
 // User data (PIN and Name)
 const users = [
-    { pin: 1234, name: "Rohit" },
+    { pin: 9875, name: "Rohit" },
     { pin: 5678, name: "Anita" },
     { pin: 91011, name: "Vikas" }
 ];
